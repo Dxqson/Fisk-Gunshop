@@ -1,0 +1,861 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+  font-family: 'Lobster', cursive;
+}
+
+/*  SECTION CATALOGUE  */
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    background-size: cover;
+    background-image: url(/images/old_page3.jpg);
+    background-repeat: no-repeat;
+}
+
+/* tete de page */
+
+.header.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header.header img {
+    width: 200px
+}
+
+/* page de bienvenue (landing page) */
+
+.landing-page {
+    padding: 0px 30px;
+}
+
+.logo_club {
+    position: absolute;
+    position: fixed;
+    max-width: 100%;
+    height: auto;
+    opacity: 0.1;
+    margin-left: -200px;
+    margin-top: -120px;
+}
+
+#big-title {
+    margin: 0 auto;
+    color: black;
+    font-size: 110px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 0px 15px whitesmoke;
+    overflow: hidden; /* Cache les lettres qui ne sont pas encore animées */
+    border-right: 0.15em solid ; 
+    white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+    animation: typing 2s steps(30, end), infinite, blink-caret 10s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: transparent }
+}
+
+/*  Menu de navigation  */
+
+nav.nav {
+    position: absolute;
+    align-items: center;
+    font-size: 26px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+nav.nav a {
+    color: black;
+    display: flex;
+    text-decoration: none;   
+}
+
+.slide_line {
+    text-decoration: none;
+    color:  black;
+    position: relative;
+}
+
+.slide_line::before {
+    content: "";
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+
+.slide_line:hover::before {
+    transform-origin: 0 0;
+    transform: scaleX(1);
+}
+
+/* Nos armes à feu / Nos armes blanches */
+
+.section_title {
+    color: black;
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    position: relative; 
+}
+
+.section_title::before {
+    content: "";
+    position: absolute;
+    background-color: brown;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+
+.bests_items {
+    margin: 30px;
+}
+
+.revolver_container {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr 1Fr;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+    gap: 20px; 
+    padding: 0% 2%;
+}
+
+.weapon_box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: -10px 14px 15px black;
+}
+
+/*  Details prix nom */
+  
+
+.weapon_details {
+    display: flex;
+    position: absolute;
+    width: 92%;
+    bottom: 0;
+    justify-content: space-between;
+}
+
+.weapon_name {
+    color: beige;
+    font-size: 25px;
+    line-height: 5px;
+}
+
+.weapon_price {
+    color: beige;
+    font-size: 28px;
+    line-height: 3px; 
+}
+
+/* Revolvers */
+
+.revolver1 {
+    background-image: url(../image_catalogue/revolver/schofield.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.revolver1:hover {
+    transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.revolver2 {
+    background-image: url(../image_catalogue/revolver/lemat.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.revolver2:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.revolver3 {
+    background-image: url(../image_catalogue/revolver/navy.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.revolver3:hover {
+    transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.revolver4 {
+    background-image: url(../image_catalogue/revolver/double_action.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 7;
+}
+
+.revolver4:hover {
+    transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.revolver5 {
+    background-image: url(../image_catalogue/revolver/cattleman.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 7;
+}
+
+.revolver5:hover {
+    transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Pistolets */
+
+.pistol_container {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+    gap: 20px; 
+    padding: 0% 5%;
+}
+
+.pistol_title {
+    color: black;
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    position: relative; 
+    margin-top: -50px;
+}
+
+.pistol_title::before {
+    content: "";
+    position: absolute;
+    background-color: brown;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+
+.pistol1 {
+    background-image: url(../image_catalogue/pistolet/m1899.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.pistol1:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pistol2 {
+    background-image: url(../image_catalogue/pistolet/mauser.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.pistol2:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pistol3 {
+    background-image: url(../image_catalogue/pistolet/semi_automatique.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pistol3:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pistol4 {
+    background-image: url(../image_catalogue/pistolet/volcanic.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pistol4:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Carabines */
+
+.carabine_container {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+    gap: 20px; 
+    padding: 0% 3%;
+}
+
+.carabine1 {
+    background-image: url(../image_catalogue/carabine/carabine_repetition.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.carabine1:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carabine2 {
+    background-image: url(../image_catalogue/carabine/evans.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.carabine2:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.carabine3 {
+    background-image: url(../image_catalogue/carabine/lancaster.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+
+.carabine3:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carabine4 {
+    background-image: url(../image_catalogue/carabine/litchfield.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+
+.carabine4:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Fusils à Pompe */
+
+.pompe_container {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1Fr;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 200px;
+    gap: 20px; 
+    padding: 0% 2%;
+}
+
+.pompe1 {
+    background-image: url(../image_catalogue/pompe/double_canon.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.pompe1:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pompe2 {
+    background-image: url(../image_catalogue/pompe/canon_scie.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pompe2:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pompe3 {
+    background-image: url(../image_catalogue/pompe/pompe_repetition.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.pompe3:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pompe4 {
+    background-image: url(../image_catalogue/pompe/pompe.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    margin-left: 30px;
+}
+
+.pompe4:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pompe5 {
+    background-image: url(../image_catalogue/pompe/semi_automatique.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    margin-right: 30px;
+}
+
+.pompe5:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pompe6 {
+    background-image: url(../image_catalogue/pompe/elephant.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 7;
+    grid-row-end: 11; 
+}
+
+.pompe6:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Fusils */
+
+.fusil_container {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    gap: 20px; 
+    padding: 0% 2%;
+}
+
+.fusil1 {
+    background-image: url(../image_catalogue/fusil/petit_gibier.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-right: 5px;
+}
+
+.fusil1:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.fusil2 {
+    background-image: url(../image_catalogue/fusil/springfield.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-left: 5px;
+}
+
+.fusil2:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.fusil3 {
+    background-image: url(../image_catalogue/fusil/verrou.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+
+.fusil3:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* pied de page */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 50px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    margin-top: 90px;
+}
+
+.scroll_down {
+    content: "";
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+}
+
+/* La Bagarre */
+
+.logo_fc {
+    position: absolute;
+    position: fixed;
+    max-width: 100%;
+    height: auto;
+    opacity: 0.1;
+    margin-left: -200px;
+    margin-top: -120px;
+}
+
+.affiche_title {
+    margin-left: 40px;
+    color: black;
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    position: relative; 
+}
+
+.affiche_title::before {
+    content: "";
+    position: absolute;
+    background-color: brown;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+
+.affiche_container {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(11, 100px);
+    gap: 20px; 
+    padding: 1% 0%;
+}
+
+.affiche1 {
+    background-image: url(../images/affiche_boxe.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 12;
+}
+
+/* Contact */
+
+/* .logo_fc {
+    position: absolute;
+    position: fixed;
+    max-width: 100%;
+    height: auto;
+    opacity: 0.1;
+    margin-left: -200px;
+    margin-top: -120px;
+}
+
+.nom {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-left: 8%;
+    margin-top: 40px;
+    width: 80%;
+}
+
+.contact_container {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px;
+    gap: 20px; 
+    padding: 6% 2%;
+}
+
+.contact_box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: -10px 14px 15px black;
+    background-color: transparent;
+}
+
+.contact_details {
+    color: black;
+}
+
+.contact1 {
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    align-items: stretch;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.contact1:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact2 {
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.contact2:hover {
+    transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+} */
+

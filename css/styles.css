@@ -1,0 +1,517 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    font-family: 'Lobster', cursive;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-size: cover;
+    background-image: url(/images/old_page3.jpg);
+    background-repeat: no-repeat;
+}
+
+.logo_fight_club {
+    position: absolute;
+    position: fixed;
+    max-width: 100%;
+    height: auto;
+    opacity: 0.1;
+    margin-left: -200px;
+    margin-top: -120px;
+}
+
+/* tete de page */
+
+.header.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header.header img {
+    width: 200px;
+}
+
+/* page de bienvenue (landing page) */
+
+.landing-page {
+    padding: 0px 30px;
+}
+
+#big-title {
+    margin: 0 auto;
+    color: black;
+    font-size: 110px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 0px 15px whitesmoke;
+    overflow: hidden; /* Cache les lettres qui ne sont pas encore animées */
+    border-right: 0.15em solid ; 
+    white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+    animation: typing 2s steps(30, end), infinite, blink-caret 10s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: transparent }
+}
+
+/* menu de navigation */
+
+nav.nav {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+    margin: auto;
+}
+
+nav.nav a {
+    color: black;
+    display: flex;
+    font-size: 26px;
+    text-decoration: none;   
+}
+
+.slide_line {
+    text-decoration: none;
+    color:  black;
+    position: relative;
+}
+
+.slide_line::before {
+    content: "";
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+
+.slide_line:hover::before {
+    transform-origin: 0 0;
+    transform: scaleX(1);
+}
+
+/* services  Nos meilleures ventes / Nos customisations */
+
+
+
+/* nos meilleures ventes */
+
+.section-title {
+    color: black;
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    position: relative;   
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    background-color: brown;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+
+.bests-items {
+    margin: 30px;
+}
+
+.meilleures_ventes {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 140px 100px 100px 200px 150px 160px;
+    gap: 20px;
+    padding: 0% 8%;
+}
+
+.weapon_box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: -10px 14px 15px black;
+}
+
+.weapon1 {
+    background-image: url(../image_catalogue/fusil/verrou.png);    
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.weapon1:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon2 {
+    background-image: url(../image_catalogue/pistolet/m1899.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.weapon2:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon3 {
+    background-image: url(../image_catalogue/revolver/lemat.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.weapon3:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon4 {
+    background-image: url(../image_catalogue/pompe/pompe.png);
+    display: flex;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    background-position: 20% 54%;
+}
+
+.weapon4:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_details {
+    display: flex;
+    position: absolute;
+    width: 92%;
+    bottom: 0;
+    justify-content: space-between;
+}
+
+.weapon_name {
+    color: beige;
+    font-size: 25px;
+    line-height: 5px;
+}
+
+.weapon_price {
+    color: beige;
+    font-size: 28px;
+    line-height: 3px; 
+} 
+
+/* nos customisations */
+
+.all_weapon {
+    margin: 50px;
+}
+
+.weapon_grid {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 100px 100px 200px 150px 180px 180px 100px;
+    gap: 20px;
+    padding: 0% 2%;
+}
+
+.weapon_grid1 {
+    background-image: url(../custom/lemat_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.weapon_grid1:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid2 {
+    background-image: url(../custom/springfield_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.weapon_grid2:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid3 {
+    background-image: url(../custom/mauser_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+}
+
+.weapon_grid3:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid4 {
+    background-image: url(../custom/schofield_custom.png);
+    background-position: 0px;
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.weapon_grid4:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid5 {
+    background-image: url(../custom/semi_automatique_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.weapon_grid5:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid6 {
+    background-image: url(../custom/canon_scie_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.weapon_grid6:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid7 {
+    background-image: url(../custom/volcanic_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+}
+
+.weapon_grid7:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid8 {
+    background-image: url(../custom/petit_gibier_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.weapon_grid8:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid9 {
+    background-image: url(../custom/repetition_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.weapon_grid9:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid10 {
+    background-image: url(../custom/evans_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+}
+
+.weapon_grid10:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid11 {
+    background-image: url(../custom/elephant_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+.weapon_grid11:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid12 {
+    background-image: url(../custom/litchfield_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+}
+
+.weapon_grid12:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid13 {
+    background-image: url(../custom/m1899_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+}
+
+.weapon_grid13:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid14 {
+    background-image: url(../custom/couteaux_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+}
+
+.weapon_grid14:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid15 {
+    background-image: url(../custom/verrou_custom.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.weapon_grid15:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.weapon_grid16 {
+    background-image: url(../ventes-armes/pompe.png);
+    border: 2px solid;
+    border-radius: 7px;
+    border-color: black;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.weapon_grid16:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* pied de page */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 50px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+.scroll_down {
+    content: "";
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+}
+
+/* Page Catalogues */
+
+
